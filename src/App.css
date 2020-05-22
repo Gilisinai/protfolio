@@ -299,6 +299,7 @@
   background: var(--mode);
   cursor: pointer;
   transition: 0.5s ease-in;
+  text-decoration: none;
 }
 
 .btn-text {
@@ -763,6 +764,18 @@ ul li button:hover {
     top: 28px;
     left: 10px;
   }
+
+  #section4 .social.flex-container.mr-sm {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
+
+  .footer-icon {
+    width: 30px;
+  }
+
+
   
 }
 
