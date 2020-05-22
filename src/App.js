@@ -10,7 +10,8 @@ class App extends Component {
 
   state = {
     darkMode: false,
-    color: '#21283E'
+    color: '#21283E',
+    
   }
 
   changeModes = () => {

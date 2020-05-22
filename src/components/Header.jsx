@@ -14,7 +14,10 @@ class Header extends Component {
 
     state = {
         color: '#5a50ff',
-        showColorPicker: false
+        showColorPicker: false,
+        slide: 0,
+        slideInvert:0,
+        lastScrollY: 0
     }
 
     changeModes = () => {
@@ -34,6 +37,30 @@ class Header extends Component {
             showColorPicker: !this.state.showColorPicker
         })
     }
+
+    componentWillMount() {
+        // When this component mounts, begin listening for scroll changes
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        // If this component is unmounted, stop listening
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        const { lastScrollY } = this.state;
+        const currentScrollY = window.scrollY;
+        
+
+        if (currentScrollY > lastScrollY) {
+            this.setState({ slide: '-50px' , slideInvert: '50px' });
+        } else {
+            this.setState({ slide: '0px', slideInvert:'0px' });
+        }
+        this.setState({ lastScrollY: currentScrollY });
+    };
+
 
     render() {
         const { darkMode } = this.props
@@ -110,28 +137,34 @@ class Header extends Component {
                     </div>
 
                 </div>
-                <div className="header flex-container mobile-only switchers">
+                <div className="header flex-container mobile-only switchers" style={{
+                    transform: `translate(0, ${this.state.slide})`,
+                    transition: 'transform 90ms linear',
+                }}>
                     <div className="header-item-wrapper">
                         <div className="primary-color-bg" onClick={this.openPicker}></div>
                         {this.state.showColorPicker && <HuePicker className="scale-up-hor-left" color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
                     </div>
                     <div className="header-item-wrapper">
-                    <div className={`mode-toggler ${darkMode ? 'night' : 'day'}`} onClick={this.changeModes}>
-                      <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun}/>
-                      <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1}/>
-                      <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2}/>
-                      <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1}/>
-                      <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1}/>
-                      <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1}/>
-                      <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon}/>
-                      <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight}/>
-                      <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2}/>
+                        <div className={`mode-toggler ${darkMode ? 'night' : 'day'}`} onClick={this.changeModes}>
+                            <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun} />
+                            <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1} />
+                            <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2} />
+                            <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
+                            <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
+                            <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
+                            <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon} />
+                            <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight} />
+                            <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2} />
 
 
+                        </div>
                     </div>
                 </div>
-                </div>
-                <div className="header flex-container mobile-only">
+                <div className="header flex-container mobile-only" style={{
+                    transform: `translate(0, ${this.state.slideInvert})`,
+                    transition: 'transform 90ms linear',
+                }}>
                     <Link
                         className="header-item-wrapper"
                         activeClass="active"

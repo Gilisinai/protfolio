@@ -56,10 +56,12 @@
   height: 50px;
   border-radius: 30px;
   position: relative;
+  
 }
 
 .day {
   background: linear-gradient(180deg, #6596FB 0%, #7BA6FF 36.98%, #7BA6FF 69.79%, #6596FB 100%); 
+  
 }
 
 .sun {
@@ -180,53 +182,6 @@
   position: absolute;
   left: 160px
 }
-
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  visibility: hidden;
-  display: none;
-}
-
-.check {
-  display: block;
-  position: relative;
-  width: 40px;
-  height: 20px;
-  background: var(--mode);
-  cursor: pointer;
-  border-radius: 20px;
-  overflow: hidden;
-  transition: ease-in 0.5s;
-  border: 1px solid #fff;
-}
-
-input[type="checkbox"]:checked ~ .check {
-  background: #fff;
-  border: 1px solid var(--mode);
-}
-
-input[type="checkbox"]:checked ~ .header {
-  background: #092c3c;
- 
-}
-
-.check:before {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  background: #fff;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  transition: 0.5s;
-}
-
-input[type="checkbox"]:checked ~ .check:before {
-  content: '';
-  background: var(--dark);
-  left: 22px;
-} 
 
 /* layout css */
 
@@ -416,6 +371,9 @@ input[type="checkbox"]:checked ~ .check:before {
   bottom: 70px !important;
 }
 
+.slick-arrow.slick-prev {
+  display: none !important;
+}
 ul li.slick-active button {
   background-color: var(--primaryColor) !important;
   border: 1px solid var(--primaryColor) !important;
@@ -619,8 +577,41 @@ ul li button:hover {
     height: 100px;
   }
 
+  .mode-toggler{
+    height: 45px;
+    width: 90px;
+  }
+
+  .moon {
+    width: 38px;
+    left: 47px;
+  }
+
+  .star-3 {
+    left: 37px;
+  }
   
-  
+  .star-4 {
+    left: 21px;
+  }
+
+  .star-5 {
+    left: 10px;
+  }
+
+  .star-night-2 {
+    top: 32px;
+  }
+
+  .text-normal.base-color.color-text.mr-sm {
+    margin-right: 10px;
+  }
+
+  .chrome-picker {
+    width: 150px !important;
+    left: 120px;
+    bottom: 15px;
+  }
 }
 
 @media screen and (max-width:479px) {
@@ -715,6 +706,7 @@ ul li button:hover {
   .mode-toggler{
     width: 72px;
     height: 40px;
+    margin-right: 20px;
   }
 
   .sun {
