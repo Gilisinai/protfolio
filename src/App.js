@@ -33,6 +33,15 @@ class App extends Component {
     
   }
 
+  componentDidMount = () => {
+    let date = new Date
+    if(date.getHours() > 17) {
+      this.setState({
+        darkMode: true
+      }, this.chooseColors() )
+    }
+  }
+
   render() {
     const { darkMode } = this.state;
 

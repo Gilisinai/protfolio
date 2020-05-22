@@ -5,10 +5,10 @@ import github from '../assets/icons/github.svg'
 class Footer extends Component {
     render() {
         return (
-            <div className="container flex-container half-width vertical full-height" id="section4">
+            <div className="container flex-container half-width vertical  full-height" id="section4">
                 <div className="primary-heading base-color center-text mb-md">I’d love to build something great with you!</div>
                 <div className="primary-heading primary-color center-text mb-md">Stay in touch!</div>
-                <div className="flex-container space-evenly">
+                <div className="flex-container space-evenly wrap">
                     <div className="social flex-container mr-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" className="primary-color-icon footer-icon" viewBox="0 0 24 24" ><path fill="none" d="M0 0h24v24H0z"/><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
                         

@@ -7,6 +7,7 @@ import macbook from '../assets/images/Macbook-Pro.png'
 import play from '../assets/images/play-mini-fill.svg'
 import plus from '../assets/images/add-circle-line.svg'
 import websites from '../data/data'
+import securithings from '../assets/videos/Securithings.mp4'
 
 
 function SampleNextArrow(props) {
@@ -64,8 +65,8 @@ export default class SimpleSlider extends Component {
             <div key={i} className="slider-item flex-container">
               <div className="slider-item-child">
                 <div className="video-wrapper">
-                  {/* <video className="video" controls>
-                    <source src="movie.mp4" type="video/mp4">
+                  {/* <video  className="video" autoPlay loop>
+                    <source src={securithings} type="video/mp4"/>
                       
                     </video> */}
                       <img src={macbook} className="video" />

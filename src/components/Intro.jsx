@@ -6,7 +6,7 @@ class Intro extends Component {
     render() {
         const {darkMode} = this.props
         return (
-            <div className={`container full-height`} id="section1">
+            <div className={`container full-height flex-container`} id="section1">
                 <div className="flex-container half-width vertical centered">
 
                 <img src={gili} className="profile-pic"/>
