@@ -20,6 +20,8 @@
   bottom: 10vh;
   display: flex;
   z-index: 1;
+  background-color: var(--mode);
+  transition: 0.5s ease-in;
 }
 
 .header-item-wrapper {
@@ -90,6 +92,11 @@
 .scale-out-right {
 	-webkit-animation: scale-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: scale-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.scale-up-hor-left {
+	-webkit-animation: scale-up-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-up-hor-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 .star-1 {
@@ -335,6 +342,7 @@ input[type="checkbox"]:checked ~ .check:before {
   box-shadow: 0px 0px 40px rgba(85, 85, 85, 0.4);
   background: var(--mode);
   cursor: pointer;
+  transition: 0.5s ease-in;
 }
 
 .btn-text {
@@ -537,16 +545,18 @@ ul li button:hover {
   display: flex;
   bottom: 0px;
   height: 50px;
-  background: white;
+  background-color: var(--mode);
+  transition: 0.5s ease-in;
 }
 
 .header.flex-container.mobile-only.switchers {
   max-width: 100vw;
   width: 100vw;
   display: flex;
+  justify-content: space-between;
   top: 0px;
   height: 50px;
-  background: white;
+  /* background: white; */
   border-top: none;
   border-bottom: 2px solid lightgray;
 }
@@ -671,7 +681,11 @@ ul li button:hover {
   }
 
   .hue-picker {
-    min-width: 200px;
+    
+    position: absolute !important;
+    width: 180px !important;
+    left: 100% ;
+    
   }
 
   .btn.flex-container.space-evenly.mr-sm {
@@ -697,6 +711,64 @@ ul li button:hover {
   .slick-arrow {
     display: none !important;
   }
+
+  .mode-toggler{
+    width: 72px;
+    height: 40px;
+  }
+
+  .sun {
+    width: 35px;
+    top: 3px;
+  }
+
+  .star-1 {
+    top: 12px;
+    left: 45px;
+  }
+
+  .star-2 {
+    top: 4px;
+    left: 55px;
+  }
+
+  .star-3 {
+    position: absolute;
+    top: 28px;
+    left: 35px;
+  }
+  
+  .star-4 {
+    position: absolute;
+    top: 23px;
+    left: 18px;
+  }
+  
+  .star-5 {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+  }
+  
+  .moon {
+    position: absolute;
+    top: 7px;
+    left: 40px;
+    width: 27px;
+  }
+  
+  .star-night-1 {
+    position: absolute;
+    top: 7px;
+    left: 27px;
+  }
+  
+  .star-night-2 {
+    position: absolute;
+    top: 28px;
+    left: 10px;
+  }
+  
 }
 
 
@@ -842,5 +914,34 @@ ul li button:hover {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
   }
 }
