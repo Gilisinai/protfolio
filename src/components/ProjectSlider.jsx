@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import RightArrow from '../assets/images/arrow-right.svg'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import macbook from '../assets/images/Macbook-Pro.png'
-import play from '../assets/images/play-mini-fill.svg'
-import plus from '../assets/images/add-circle-line.svg'
 import websites from '../data/data'
-import securithings from '../assets/videos/Securithings.mp4'
+
 
 
 function SampleNextArrow(props) {
@@ -28,21 +25,6 @@ function SampleNextArrow(props) {
   );
 }
 
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block",
-//       background: "red",
-//       width: '75px', 
-//       left: '0' ,
-//       height: '75px' 
-//       }}
-//       onClick={onClick}
-//     />
-//   );
-// }
 
 export default class SimpleSlider extends Component {
   render() {
@@ -69,7 +51,7 @@ export default class SimpleSlider extends Component {
                     <source src={securithings} type="video/mp4"/>
                       
                     </video> */}
-                      <img src={macbook} className="video" />
+                      <img alt="" src={macbook} className="video" />
                 </div>
                     <div className="flex-container vertical project-content">
                       <div className="primary-heading base-color left-text full-width">{website.name}</div>

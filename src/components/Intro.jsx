@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import gili from '../assets/images/gili.png'
-import whatsApp from '../assets/images/whatsapp-line.svg'
+
 
 class Intro extends Component {
     render() {
-        const {darkMode} = this.props
+        
         return (
             <div className={`container full-height flex-container`} id="section1">
                 <div className="flex-container half-width vertical centered">
 
-                <img src={gili} className="profile-pic"/>
+                <img src={gili} className="profile-pic" alt=""/>
                 <div className={`primary-heading base-color center-text `}>Gili Sinai</div>
                 <div className="secondary-heading primary-color center-text">Full Stack Web Developer</div>
                 <div className={`text-normal base-color center-text `}>Hi! I’m Gili, formerly an interactive developer at Pyro TLV, and currently looking for a new challenge!</div>

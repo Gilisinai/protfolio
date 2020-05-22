@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link} from "react-scroll";
 import { ChromePicker, HuePicker } from 'react-color'
 import sun from '../assets/images/star.svg'
 import star1 from '../assets/images/Ellipse-5.svg'
@@ -69,15 +69,15 @@ class Header extends Component {
                 <div className="header flex-container vertical flex-start desktop-only">
                     <div className="header-item-wrapper">
                         <div className={`mode-toggler ${darkMode ? 'night' : 'day'}`} onClick={this.changeModes}>
-                            <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun} />
-                            <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1} />
-                            <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2} />
-                            <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon} />
-                            <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight} />
-                            <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2} />
+                            <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun} alt="" />
+                            <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2} alt="" />
+                            <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon} alt="" />
+                            <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight} alt="" />
+                            <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2} alt="" />
 
 
                         </div>
@@ -147,15 +147,15 @@ class Header extends Component {
                     </div>
                     <div className="header-item-wrapper">
                         <div className={`mode-toggler ${darkMode ? 'night' : 'day'}`} onClick={this.changeModes}>
-                            <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun} />
-                            <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1} />
-                            <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2} />
-                            <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} />
-                            <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon} />
-                            <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight} />
-                            <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2} />
+                            <img className={`sun ${darkMode ? 'scale-out-right' : ''} scale-up-right`} src={sun} alt="" />
+                            <img className={`star-1 ${darkMode ? 'none' : ''} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-2 ${darkMode ? 'none' : ''} scale-up-center`} src={star2} alt="" />
+                            <img className={`star-3 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-4 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`star-5 ${darkMode ? '' : 'none'} scale-up-center`} src={star1} alt="" />
+                            <img className={`moon ${darkMode ? '' : 'scale-out-left'} scale-up-left `} src={moon} alt="" />
+                            <img className={`star-night-1 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight} alt="" />
+                            <img className={`star-night-2 ${darkMode ? '' : 'none'} scale-up-center`} src={starNight2} alt="" />
 
 
                         </div>

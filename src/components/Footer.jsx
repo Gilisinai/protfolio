@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import facebook from '../assets/images/facebook-fill.svg'
-import github from '../assets/icons/github.svg'
 
 class Footer extends Component {
     render() {

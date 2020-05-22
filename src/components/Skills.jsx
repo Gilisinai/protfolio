@@ -8,7 +8,7 @@ class Skills extends Component {
 
                 {skills.map((skill, i) => (
                     <div key={i} className="social flex-container vertical skill mr-sm">
-                        <img className="skill-icon" src={skill.icon} />
+                        <img className="skill-icon" src={skill.icon} alt="" />
                         <div className="skill-text" style={{color:`${skill.color}`}}>{skill.name}</div>
                     </div>
                 ))}
