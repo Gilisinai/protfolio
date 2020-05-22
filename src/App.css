@@ -514,9 +514,10 @@ ul li button:hover {
   justify-content: space-between;
   top: 0px;
   height: 50px;
-  /* background: white; */
+  background-color: var(--mode);
   border-top: none;
   border-bottom: 2px solid lightgray;
+  transition: 0.5s ease-in;
 }
 
 @media screen and (max-width: 1440px) {

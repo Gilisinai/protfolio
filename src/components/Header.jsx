@@ -139,7 +139,7 @@ class Header extends Component {
                 </div>
                 <div className="header flex-container mobile-only switchers" style={{
                     transform: `translate(0, ${this.state.slide})`,
-                    transition: 'transform 90ms linear',
+                    transition: 'transform 90ms linear, background 0.5s ease-in',
                 }}>
                     <div className="header-item-wrapper">
                         <div className="primary-color-bg" onClick={this.openPicker}></div>
@@ -163,7 +163,7 @@ class Header extends Component {
                 </div>
                 <div className="header flex-container mobile-only" style={{
                     transform: `translate(0, ${this.state.slideInvert})`,
-                    transition: 'transform 90ms linear',
+                    transition: 'transform 90ms linear, background 0.5s ease-in',
                 }}>
                     <Link
                         className="header-item-wrapper"
