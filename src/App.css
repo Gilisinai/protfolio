@@ -9,6 +9,7 @@
   background: var(--mode);
   font-family: 'Raleway', sans-serif;
   transition: 0.5s ease-in;
+  -webkit-tap-highlight-color: transparent;
 }
 /* header css */
 .header {
