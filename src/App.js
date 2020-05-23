@@ -26,7 +26,7 @@ class App extends Component {
     if(!this.state.darkMode){
       document.documentElement.style.setProperty('--base', '#fff')
       document.documentElement.style.setProperty('--mode', '#21283E')
-      document.documentElement.style.setProperty('--primaryColor', '#A9650B')
+      document.documentElement.style.setProperty('--primaryColor', '#DAA520')
     } else {
       document.documentElement.style.setProperty('--base', '#000')
       document.documentElement.style.setProperty('--mode', '#fff')
