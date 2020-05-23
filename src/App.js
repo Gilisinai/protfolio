@@ -36,7 +36,7 @@ class App extends Component {
 
   componentDidMount = () => {
     let date = new Date
-    if(date.getHours() > 17) {
+    if(date.getHours() > 17 || date.getHours() < 6) {
       this.setState({
         darkMode: true
       }, this.chooseColors() )
