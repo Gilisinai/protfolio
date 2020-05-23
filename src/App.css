@@ -789,7 +789,9 @@ ul li button:hover {
     background-color: var(--mode);
   }
 
-  
+  .header-item-wrapper:hover .icon {
+    fill: var(--base);
+  }
 }
 
 
