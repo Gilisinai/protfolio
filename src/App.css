@@ -34,6 +34,15 @@
   cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: transparent;
+  transition: background .3s ease-in;
+}
+
+.header-item-wrapper:hover {
+  background-color: lightgray;
+}
+
+.header-item-wrapper:hover .icon {
+  fill: var(--primaryColor);
 }
 
 .header-item-wrapper.active::before {
