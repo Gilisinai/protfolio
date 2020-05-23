@@ -34,7 +34,7 @@
   cursor: pointer;
   position: relative;
   -webkit-tap-highlight-color: transparent;
-  transition: background .3s ease-in;
+  transition: background .5s ease-in;
 }
 
 .header-item-wrapper:hover {
@@ -785,6 +785,9 @@ ul li button:hover {
     width: 30px;
   }
 
+  .header-item-wrapper:hover {
+    background-color: var(--mode);
+  }
 
   
 }
