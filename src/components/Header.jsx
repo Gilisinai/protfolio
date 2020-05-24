@@ -147,7 +147,7 @@ class Header extends Component {
                 >
                     <div className="header-item-wrapper">
                         <div className="primary-color-bg" onClick={this.openPicker}></div>
-                        {this.state.showColorPicker && <HuePicker className="scale-up-hor-left" color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
+                        {showColorPicker && <HuePicker className="scale-up-hor-left" color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
                     </div>
                     <div className="header-item-wrapper">
                         <div className={`mode-toggler ${darkMode ? 'night' : 'day'}`} onClick={this.changeModes}>
