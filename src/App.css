@@ -484,6 +484,11 @@ ul li button:hover {
   border-radius: 50%;
   box-shadow: 0px 0px 30px rgba(206, 206, 206, 0.4);
   cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.social:hover {
+  transform: scale(1.2);
 }
 
 /* darkmode */
@@ -502,6 +507,10 @@ ul li button:hover {
 
 .footer-icon {
   width: 75px;
+}
+
+.footer-heading{
+  width: 75%;
 }
 
 .mobile-only {
@@ -531,6 +540,8 @@ ul li button:hover {
   border-bottom: 2px solid lightgray;
   transition: 0.5s ease-in;
 }
+
+
 
 @media screen and (max-width: 1440px) {
   .half-width {

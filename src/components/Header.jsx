@@ -24,6 +24,8 @@ class Header extends Component {
         this.props.changeModes()
     }
 
+    
+
     handleChangeComplete = (color, event) => {
         this.setState({ color: color.hex }, this.chooseColor());
     };
@@ -33,19 +35,19 @@ class Header extends Component {
     }
 
     openPicker = () => {
-        this.setState({
-            showColorPicker: !this.state.showColorPicker
-        })
+        this.props.openPicker()
     }
 
     componentWillMount() {
         // When this component mounts, begin listening for scroll changes
         window.addEventListener('scroll', this.handleScroll);
+        
     }
 
     componentWillUnmount() {
         // If this component is unmounted, stop listening
         window.removeEventListener('scroll', this.handleScroll);
+        
     }
 
     handleScroll = () => {
@@ -63,7 +65,7 @@ class Header extends Component {
 
 
     render() {
-        const { darkMode } = this.props
+        const { darkMode,showColorPicker } = this.props
         return (
             <Fragment>
                 <div className="header flex-container vertical flex-start desktop-only">
@@ -130,17 +132,19 @@ class Header extends Component {
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z" /></svg>
                         <svg xmlns="http://www.w3.org/2000/svg" className="icon-full" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z" /><path d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z" /></svg>
                     </Link>
-                    <div className="header-item-wrapper">
+                    <div className="header-item-wrapper" onClick={this.openPicker}>
                         <div className="text-normal base-color color-text mr-sm">Color:</div>
-                        <div className="primary-color-bg" onClick={this.openPicker}></div>
-                        {this.state.showColorPicker && <ChromePicker color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
+                        <div className="primary-color-bg" ></div>
+                        {showColorPicker && <ChromePicker color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
                     </div>
 
                 </div>
-                <div className="header flex-container mobile-only switchers" style={{
-                    transform: `translate(0, ${this.state.slide})`,
-                    transition: 'transform 90ms linear, background 0.5s ease-in',
-                }}>
+                <div className="header flex-container mobile-only switchers" 
+                // style={{
+                //     transform: `translate(0, ${this.state.slide})`,
+                //     transition: 'transform 90ms linear, background 0.5s ease-in',
+                // }}
+                >
                     <div className="header-item-wrapper">
                         <div className="primary-color-bg" onClick={this.openPicker}></div>
                         {this.state.showColorPicker && <HuePicker className="scale-up-hor-left" color={this.state.color} onChange={this.handleChangeComplete} onClick={this.chooseColor} />}
@@ -161,10 +165,12 @@ class Header extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="header flex-container mobile-only" style={{
-                    transform: `translate(0, ${this.state.slideInvert})`,
-                    transition: 'transform 90ms linear, background 0.5s ease-in',
-                }}>
+                <div className="header flex-container mobile-only" 
+                // style={{
+                //     transform: `translate(0, ${this.state.slideInvert})`,
+                //     transition: 'transform 90ms linear, background 0.5s ease-in',
+                // }}
+                >
                     <Link
                         className="header-item-wrapper"
                         activeClass="active"

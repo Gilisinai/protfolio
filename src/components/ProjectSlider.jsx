@@ -39,7 +39,7 @@ export default class SimpleSlider extends Component {
       // prevArrow: <SamplePrevArrow/>
     };
     return (
-      <div className="container" id="section2">
+      <div className="container" id="section2" onClick={this.props.closePicker}>
 
         <Slider {...settings}>
           {websites.map((website, i) => (
