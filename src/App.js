@@ -68,7 +68,7 @@ class App extends Component {
         <Header changeModes={this.changeModes} openPicker={this.openPicker} closePicker={this.closePicker} darkMode={darkMode} showColorPicker={showColorPicker} />
         <Intro darkMode={darkMode}  closePicker={this.closePicker}/>
         <SimpleSlider darkMode={darkMode} closePicker={this.closePicker}/>
-        <Skills darkMode={darkMode} closePicker={this.closePicker}/>
+        {/* <Skills darkMode={darkMode} closePicker={this.closePicker}/> */}
         <Footer darkMode={darkMode} closePicker={this.closePicker}/>
       </div>
     );

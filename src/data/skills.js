@@ -8,54 +8,86 @@ import firebase from '../assets/icons/firebase.svg'
 import webflow from '../assets/icons/webflow-icon.svg'
 import material from '../assets/icons/material-ui.svg'
 
-
 const skills = [
     {
-        name: "CSS",
-        icon: css,
-        color: '#2092ec'
+        skills: [{
+            name: "MongoDB",
+            icon: mongodb,
+            color: '#1f8937',
+            top: 50,
+            right: 0,
+        },
+
+        {
+            name: "firebase",
+            icon: firebase,
+            color: '#F6820C',
+            top: 50,
+            right: 0,
+        },],
+        icon: '',
+        name: 'DB'
     },
     {
-        name: "React",
-        icon: react,
-        color: '#5ed4f4'
+        skills: [{
+            name: "CSS",
+            icon: css,
+            color: '#2092ec',
+            top: 50,
+            right: 0,
+        },
+        {
+            name: "React",
+            icon: react,
+            color: '#5ed4f4',
+            top: 50,
+            right: 0,
+        }, {
+            name: "html",
+            icon: html,
+            color: '#de4b25',
+            top: 50,
+            right: 0,
+        },
+        {
+            name: "javascript",
+            icon: javascript,
+            color: '#d0b531',
+            top: 50,
+            right: 0,
+        },
+        {
+            name: "Webflow",
+            icon: webflow,
+            color: '#4151f8',
+            top: 50,
+            right: 0,
+        },
+        {
+            name: "Material UI",
+            icon: material,
+            color: '#00B0FF',
+            top: 50,
+            right: 0,
+        },],
+        icon: '',
+        name: 'Front'
     },
     {
-        name: "Node.js",
-        icon: node,
-        color: '#649c59'
-    },
-    {
-        name: "html",
-        icon: html,
-        color: '#de4b25'
-    },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-        color: '#1f8937'
-    },
-    {
-        name: "javascript",
-        icon: javascript,
-        color: '#d0b531'
-    },
-    {
-        name: "firebase",
-        icon: firebase,
-        color: '#F6820C'
-    },
-    {
-        name: "Webflow",
-        icon: webflow,
-        color: '#4151f8'
-    },
-    {
-        name: "Material UI",
-        icon: material,
-        color: '#00B0FF'
-    },
-    
+        skills: [{
+            name: "Node.js",
+            icon: node,
+            color: '#649c59',
+            top: 50,
+            right: 0,
+        },],
+        icon: '',
+        name: 'Backend'
+    }
+
 ]
+
+
+
 
 export default skills
