@@ -1,4 +1,4 @@
-import securithings from '../assets/videos/securithings.mp4'
+
 
 const websites = [
     {
