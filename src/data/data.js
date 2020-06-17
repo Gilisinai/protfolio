@@ -7,7 +7,7 @@ const websites = [
         attributes: ['something1','something2','very long something'],
         btnText: 'View libe website',
         websiteUrl: 'https://securithings.com',
-        video: securithings
+        // video: securithings
     },
     {
         name: 'Bridgecrew',
@@ -15,7 +15,7 @@ const websites = [
         attributes: ['something1','something2','very long something'],
         btnText: 'View libe website',
         websiteUrl: 'https://bridgecrew.io/',
-        video: securithings
+        // video: securithings
     },
     // {
     //     name: 'Sheba',
