@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import Intro from './components/Intro'
 import SimpleSlider from './components/ProjectSlider'
-import Skills from './components/Skills'
+
 import Footer from './components/Footer'
 
 class App extends Component {
