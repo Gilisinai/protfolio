@@ -254,7 +254,7 @@
 .primary-heading {
   font-style: normal;
   font-weight: bold;
-  font-size: 60px;
+  font-size: 57px;
   line-height: 76px;
   
 }
@@ -429,6 +429,7 @@ ul li button:hover {
 
 .video-wrapper {
   width: 50%;
+  margin-right: 40px;
 }
 
 .video {

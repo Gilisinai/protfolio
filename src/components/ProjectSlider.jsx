@@ -46,12 +46,9 @@ export default class SimpleSlider extends Component {
 
             <div key={i} className="slider-item flex-container">
               <div className="slider-item-child">
-                <div className="video-wrapper">
-                  {/* <video  className="video" autoPlay loop>
-                    <source src={website.video} type="video/mp4"/>
-                      
-                    </video> */}
-                      <img alt="" src={macbook} className="video" />
+                <div className="video-wrapper mr-md">
+                  
+                      <img alt="" src={website.imgSrc} className="video" />
                 </div>
                     <div className="flex-container vertical project-content">
                       <div className="primary-heading base-color left-text full-width">{website.name}</div>

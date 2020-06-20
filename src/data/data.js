@@ -1,30 +1,34 @@
+import securithings from '../assets/images/securithings.PNG'
+import bridgecrew from '../assets/images/bridgecrew.PNG'
+import prevprotfolio from '../assets/images/prevprotfolio.PNG'
+
 
 
 const websites = [
     {
         name: 'securithings',
-        description: 'Developed website from scratch',
-        attributes: ['something1','something2','very long something'],
-        btnText: 'View libe website',
+        description: 'Developed website from scratch for an iot cyber security company',
+        attributes: ['html ,css ,js , jQuery','wordpress','webflow'],
+        btnText: 'View live website',
         websiteUrl: 'https://securithings.com',
-        // video: securithings
+        imgSrc: securithings
     },
     {
         name: 'Bridgecrew',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis risus phasellus posuere a, lobortis. Est habitant est ullamcorper risus, vestibulum dictumst euismod venenatis tristique.',
-        attributes: ['something1','something2','very long something'],
-        btnText: 'View libe website',
+        description: 'Responsible for full maintenance of the website including renewing style , changing existing pages and adding new pages to the site.',
+        attributes: ['html ,css , js, jQuery','wordpress','webflow', 'lottie animations'],
+        btnText: 'View live website',
         websiteUrl: 'https://bridgecrew.io/',
-        // video: securithings
+        imgSrc: bridgecrew
     },
-    // {
-    //     name: 'Sheba',
-    //     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis risus phasellus posuere a, lobortis. Est habitant est ullamcorper risus, vestibulum dictumst euismod venenatis tristique.',
-    //     attributes: ['something1','something2','very long something'],
-    //     btnText: 'View libe website',
-    //     websiteUrl: 'https://securithings.dreampyro.com/securithingswp/',
-    //     video: securithings
-    // },
+    {
+        name: 'Prev protfolio',
+        description: 'Previous protfolio including all the projects i built before my job',
+        attributes: ['React & redux/mobx','MongoDB','SQL', 'Design libraries'],
+        btnText: 'View live website',
+        websiteUrl: 'http://gilisinai-fullstack-developer.herokuapp.com/',
+        imgSrc: prevprotfolio
+    },
 ]
 
 export default websites
