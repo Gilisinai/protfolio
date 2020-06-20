@@ -756,6 +756,7 @@ ul li button:hover {
   .video-wrapper{
     width: 100%;
     margin-bottom: 20px;
+    margin-right: 0px;
   }
 
   .project-content{
